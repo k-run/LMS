@@ -71,6 +71,10 @@ public class MemberService {
                     borrowedBooks.add(book);
                     //librarianService.removeBooks(book);
                 }
+
+                else {
+                    return new BorrowResponseDto("Membership doesn't exists", List.of());
+                }
             }
 
         }
@@ -106,6 +110,11 @@ public class MemberService {
                     returnedBooks.add(book);
                     //librarianService.addBooks(book);
                 }
+
+                else {
+                    return new BorrowResponseDto("Membership doesn't exists", List.of());
+                }
+
             }
 
         }
