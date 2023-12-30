@@ -27,7 +27,7 @@ public class LibrarianController {
     public ResponseEntity<String> deleteBooks(@RequestBody Book book) {
         try {
             librarianService.removeBooks(book);
-            return ResponseEntity.ok("Book removed successfully");
+            return ResponseEntity.status(204).build();
         }
         catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
