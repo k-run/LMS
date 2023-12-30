@@ -29,7 +29,7 @@ public class MemberService {
 
     public Book searchByName(String name) {
         System.out.println("inside search by name");
-        return bookRepo.findBybookName(name);
+        return bookRepo.findByBookName(name);
     }
 
     public List<Book> searchByAuthor(String author) {
@@ -39,7 +39,7 @@ public class MemberService {
 
     public Book searchByISBN(String isbn) {
         System.out.println("inside search by isbn");
-        return bookRepo.findBybookISBN(isbn);
+        return bookRepo.findByBookISBN(isbn);
     }
 
     public BorrowResponseDto borrowBook(Long memberId, List<Book> books) {
